@@ -37,7 +37,8 @@ a:hover { text-decoration: underline; }
 }
 h1 {
   margin: 0 0 18px;
-  font: 500 clamp(30px, 5.4vw, 44px)/1.2 var(--serif);
+  font: 500 clamp(28px, 4.6vw, 40px)/1.2 var(--serif);
+  text-wrap: balance;
   letter-spacing: -0.01em;
 }
 .meta {
@@ -45,9 +46,9 @@ h1 {
   font-size: 19px;
   line-height: 1.5;
 }
-.nav { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; }
-.nav a { color: var(--text); }
-.nav a:hover { color: var(--accent); text-decoration: none; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 18px; }
+.nav a { color: var(--accent); font-weight: 500; }
+.nav a:hover { text-decoration: underline; }
 
 /* Sections */
 main { padding-top: 16px; padding-bottom: 48px; }
@@ -79,7 +80,7 @@ li::marker { color: var(--accent); }
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
   background: var(--accent-soft);
 }
 .organizers figcaption { font-size: 18px; }
@@ -87,10 +88,12 @@ li::marker { color: var(--accent); }
 /* Footer */
 .footer { border-top: 1px solid var(--rule); padding: 24px 0 40px; font-size: 14px; }
 
+/* Keep each half of the title on its own line on wider screens */
+@media (min-width: 720px) { h1 .line { white-space: nowrap; } }
+
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .hero { padding-top: 48px; }
-  h1 br { display: none; }
   h2 { font-size: 30px; }
   .schedule td:first-child { width: auto; white-space: normal; min-width: 96px; }
 }
