@@ -51,10 +51,8 @@ h1 {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(253, 252, 251, 0.92);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--rule);
+  background: var(--accent-soft);
+  border-bottom: 1px solid rgba(138, 47, 91, 0.08);
 }
 .topbar .wrapper { display: flex; flex-wrap: wrap; gap: 4px 24px; padding-top: 12px; padding-bottom: 12px; font-size: 15px; }
 .topbar a { color: var(--accent); font-weight: 500; }
